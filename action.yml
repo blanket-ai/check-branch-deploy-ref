@@ -1,0 +1,12 @@
+name: 'Check branch deploy ref'
+description: 'Gets the ref of the branch to deploy to'
+inputs:
+  pr_number:
+    description: 'The number of the PR'
+    required: true
+outputs:
+  ref: # id of output
+    description: 'The git ref to deploy to; the PR branch if not merged, otherwise the default branch.'
+runs:
+  using: 'node12'
+  main: 'index.js'
